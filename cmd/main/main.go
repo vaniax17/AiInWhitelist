@@ -2,6 +2,7 @@ package main
 
 import (
 	"aiInWhitelists/gemini"
+	"aiInWhitelists/telegram"
 	"log"
 
 	"github.com/joho/godotenv"
@@ -15,4 +16,5 @@ func main() {
 
 	log.Println(".env loaded")
 	gemini.InitAi()
+	telegram.InitTelegramBot()
 }

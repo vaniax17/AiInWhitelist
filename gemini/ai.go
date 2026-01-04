@@ -26,11 +26,12 @@ func InitAi() {
 }
 
 func Ask(prompt string) (string, error) {
+	model := os.Getenv("GEMINI_MODEL")
 	ctx := context.Background()
 
 	result, err := aiClient.Models.GenerateContent(
 		ctx,
-		"gemini-2.5-flash",
+		model,
 		genai.Text(prompt),
 		nil,
 	)
